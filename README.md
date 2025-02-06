@@ -17,6 +17,8 @@ In MedKGEval, we utilize **CPubMedKG** and **CMeKG** as baseline knowledge graph
 
 The downsampling strategy employed for these medical KGs, as detailed in Section 4.1 of the paper, is implemented in the script located at `utils/kg_sample.py`.
 
+You can retrieve the KG data using the `Git LFS` command or download the zipped file via this [Google Drive link](https://drive.google.com/file/d/1nRrhOWlvzdOgpatpQxJP0jiZrnRxhN8v/view?usp=sharing).
+
 ## Evaluation Benchmarks
 
 We employ the scripts in `utils/qa_construct.py` to construct various evaluation tasks, including entity-level, relation-level, and subgraph-level tasks, as described in Section 3.2 of the paper.
@@ -25,6 +27,8 @@ We have open-sourced the evaluation benchmarks for both **CPubMedKG** and **CMeK
 
 - **CPubMedKG** (large/small): `benchmarks/CPubMedKG_large`, `benchmarks/CPubMedKG_small`
 - **CMeKG** (large/small): `benchmarks/CMeKG_large`, `benchmarks/CMeKG_small`
+
+You can retrieve the benchmarks using the `Git LFS` command or download the zipped file via this [Google Drive link](https://drive.google.com/file/d/1lRj3BZ31Yad5sWCt1Lk6d1-uwAczWPJZ/view?usp=sharing).
 
 ## Evaluating LLMs
 
@@ -73,6 +77,8 @@ You can follow the above script to reproduce our experimental results.
 
 We have open-sourced the responses of several LLMs using the MedKGEval framework. For the `CMeKG_small` dataset, the responses from five selected LLMs (Qwen2-0.5B/1.5B/7B and HuatuoGPT2-7B/13B) can be found in the directory `results/CMeKG_small/`.
 Both task-oriented and knowledge-oriented evaluation metrics are computed using the script located at `utils/eval.py`.
+
+You can retrieve the benchmarks using the `Git LFS` command or download the zipped file via this [Google Drive link](https://drive.google.com/file/d/1b6lF6DrjDtecXw7niWlcZlUxcgTykC7d/view?usp=sharing).
 
 The experimental results for task-oriented evaluation on `CPubMedKG_small` and `CMedKG_small` are presented below.
 
