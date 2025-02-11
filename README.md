@@ -36,19 +36,19 @@ You can retrieve the benchmarks using the `Git LFS` command or download the zipp
 
 The following table summarizes the large language models evaluated in this study, including their parameter counts, domains, and repository/API versions:
 
-| LLM               | #Params | Domain         | Base          | Repository / API Version               |
-|-------------------|---------|----------------|---------------|----------------------------------------|
-| Qwen2-0.5B        | 0.5B    | General-domain | -              | Qwen/Qwen2-0.5B-Instruct              |
-| Qwen2-1.5B        | 1.5B    | General-domain | -              | Qwen/Qwen2-1.5B-Instruct              |
-| Qwen2-7B          | 7B      | General-domain | -              | Qwen/Qwen2-7B-Instruct                |
-| Baichuan2-7B      | 7B      | General-domain | -              | baichuan-inc/Baichuan2-7B-Chat        |
-| Baichuan2-13B     | 13B     | General-domain | -              | baichuan-inc/Baichuan2-13B-Chat       |
-| DISC-MedLLM       | 13B     | Medical-domain | Baichuan-13B   | Flmc/DISC-MedLLM                      |
-| HuatuoGPT2-7B     | 7B      | Medical-domain | Baichuan2-7B   | FreedomIntelligence/HuatuoGPT2-7B     |
-| HuatuoGPT2-13B    | 13B     | Medical-domain | Baichuan2-13B  | FreedomIntelligence/HuatuoGPT2-13B    |
-| PULSE-7B          | 7B      | Medical-domain | Bloom-7B       | OpenMEDLab/PULSE-7bv5                 |
-| WiNGPT2           | 8B      | Medical-domain | Llama-3-8B     | winninghealth/WiNGPT2-Llama-3-8B-Chat |
-| GPT-4o            | -       | General-domain | -              | 2024-10-01-preview                    |
+| LLM               | #Params | Domain         | Base           | Repository / API Version               |
+|-------------------|---------|----------------|----------------|----------------------------------------|
+| Qwen2-0.5B        | 0.5B    | General-domain | -              | [Qwen/Qwen2-0.5B-Instruct](https://huggingface.co/Qwen/Qwen2-0.5B-Instruct) |
+| Qwen2-1.5B        | 1.5B    | General-domain | -              | [Qwen/Qwen2-1.5B-Instruct](https://huggingface.co/Qwen/Qwen2-1.5B-Instruct) |
+| Qwen2-7B          | 7B      | General-domain | -              | [Qwen/Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)     |
+| Baichuan2-7B      | 7B      | General-domain | -              | [baichuan-inc/Baichuan2-7B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat)  |
+| Baichuan2-13B     | 13B     | General-domain | -              | [baichuan-inc/Baichuan2-13B-Chat](https://huggingface.co/baichuan-inc/Baichuan2-7B-Chat) |
+| DISC-MedLLM       | 13B     | Medical-domain | Baichuan-13B   | [Flmc/DISC-MedLLM](https://huggingface.co/Flmc/DISC-MedLLM) |
+| HuatuoGPT2-7B     | 7B      | Medical-domain | Baichuan2-7B   | [FreedomIntelligence/HuatuoGPT2-7B](https://huggingface.co/FreedomIntelligence/HuatuoGPT2-7B)   |
+| HuatuoGPT2-13B    | 13B     | Medical-domain | Baichuan2-13B  | [FreedomIntelligence/HuatuoGPT2-13B](https://huggingface.co/FreedomIntelligence/HuatuoGPT2-13B) |
+| PULSE-7B          | 7B      | Medical-domain | Bloom-7B       | [OpenMEDLab/PULSE-7bv5](https://huggingface.co/OpenMEDLab/PULSE-7bv5) |
+| WiNGPT2           | 8B      | Medical-domain | Llama-3-8B     | [winninghealth/WiNGPT2-Llama-3-8B-Chat](https://huggingface.co/winninghealth/WiNGPT2-Llama-3-8B-Chat) |
+| GPT-4o            | -       | General-domain | -              | ```2024-10-01-preview``` |
 
 ### Running LLMs with MedKGEval Benchmarks
 
