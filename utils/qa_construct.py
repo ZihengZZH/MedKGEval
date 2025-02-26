@@ -472,7 +472,7 @@ def construct_subgraph_level_task_reasoning(input_kg, outfile_bool, outfile_mcq)
         })
     for fact_dict in fact_list_neg:
         contexts = '“%s”的“%s”是“%s”，“%s”的“%s”是“%s”' % (
-            fact_dict['1hop'][0].split('@@')[0], fact_dict['1hop'][1], fact_dict['1hop'][2].split('@@')[0],
+            fact_dict['2hop'][0].split('@@')[0], fact_dict['2hop'][1], fact_dict['2hop'][2].split('@@')[0],
             fact_dict['2hop'][2].split('@@')[0], fact_dict['2hop'][3], fact_dict['2hop'][4].split('@@')[0]
         )
         head, rel, tail = fact_dict['1hop']
@@ -548,40 +548,40 @@ def construct_subgraph_level_task_reasoning(input_kg, outfile_bool, outfile_mcq)
 if __name__ == "__main__":
     for scale in ['large', 'small']:
         kg = construct_kg(
-            path_rel_triple='../data/CPubMedKG/%s/CPubMed_%s_relations.csv' % (scale, scale),
-            path_attr_triple='../data/CPubMedKG/%s/CPubMed_%s_attributes.csv' % (scale, scale),
+            path_rel_triple='../kg_data/CMeKG/%s/CMeKG_%s_relations.csv' % (scale, scale),
+            path_attr_triple='../kg_data/CMeKG/%s/CMeKG_%s_attributes.csv' % (scale, scale),
             print_stats=True
         )
         construct_entity_level_task_classification(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_entity_level_task_ET.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_entity_level_task_ET.json' % scale
         )
         construct_entity_level_task_clustering(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_entity_level_task_EC.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_entity_level_task_EC.json' % scale
         )
         construct_entity_level_task_disambiguation(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_entity_level_task_ED.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_entity_level_task_ED.json' % scale
         )
         construct_relation_level_task_fact_check(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_relation_level_task_FC.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_relation_level_task_FC.json' % scale
         )
         construct_relation_level_task_typing(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_relation_level_task_RT.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_relation_level_task_RT.json' % scale
         )
         construct_relation_level_task_rel_completion(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_relation_level_task_RP.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_relation_level_task_RP.json' % scale
         )
         construct_subgraph_level_task_fact_check(
             input_kg=kg,
-            outfile='../data/benchmarks/CPubMedKG_%s/CPubMed_subgraph_level_task_ER.json' % scale
+            outfile='../benchmarks/CMeKG_%s/CPubMed_subgraph_level_task_ER.json' % scale
         )
         construct_subgraph_level_task_reasoning(
             input_kg=kg,
-            outfile_bool='../data/benchmarks/CPubMedKG_%s/CPubMed_subgraph_level_task_R1.json' % scale,
-            outfile_mcq='../data/benchmarks/CPubMedKG_%s/CPubMed_subgraph_level_task_R2.json' % scale
+            outfile_bool='../benchmarks/CMeKG_%s/CMeKG_subgraph_level_task_R1.json' % scale,
+            outfile_mcq='../benchmarks/CMeKG_%s/CMeKG_subgraph_level_task_R2.json' % scale
         )

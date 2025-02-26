@@ -100,7 +100,7 @@ The experimental results for task-oriented evaluation on `CPubMedKG_small` are p
 | GPT-4o         | 97.83 | 90.00 | 71.00 | 86.28 | 84.12 | 59.31 | 62.19 | 68.54 | 46.51 | 35.56 | 89.29 | 57.12 | 70.65 |
 | DeepSeek-V3 ${\color{red}[\text{New}]}$ | 97.83 | 87.50 | 71.00 | 85.44 | 78.35 | 58.48 | 60.95 | 65.93 | 42.82 | 33.14 | 87.10 | 54.35 | 68.57 |
 
-The experimental results for task-oriented evaluation on `CMedKG_small` are presented below.
+The experimental results for task-oriented evaluation on `CMeKG_small` are presented below.
 
 | LLM | ET | EC | ED | Avg. | RT | FC | RP | Avg. | ER | R1 | R2 | Avg. | Overall |
 |-----|---:|---:|---:|-----:|---:|---:|---:|-----:|---:|---:|---:|-----:|--------:|
@@ -134,7 +134,7 @@ The experimental results for knowledge-oriented evaluation on `CPubMedKG_small` 
 | GPT-4o         | 66.75 | 65.66 | 55.95 | 55.60 | 62.31 |
 | DeepSeek-V3 ${\color{red}[\text{New}]}$ | 65.25 | 64.07 | 51.65 | 53.09 | 60.41 |
 
-The experimental results for knowledge-oriented evaluation on `CMedKG_small` are presented below.
+The experimental results for knowledge-oriented evaluation on `CMeKG_small` are presented below.
 
 | LLM | CovAvg($\mathcal{E}$) | CovDeg($\mathcal{E}$) | CovAvg($\mathcal{R}$) | CovDeg($\mathcal{R}$) | Cov($\mathcal{T}$) |
 |-----|----------------------:|----------------------:|----------------------:|----------------------:|-------------------:|
