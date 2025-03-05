@@ -4,8 +4,8 @@ This repository contains the code and benchmarks for the paper _**How Much Medic
 
 ## Updates
 
-* ${\color{red}[\text{2025-02-27 New}]}$ We spot minor bug in `utils/qa_construct.py` and reproduce the results of subgraph-level R1 task. The task-oriented and knowledge-oriented evaluation is therefore updated [in the following section](#evaluation-results).
-* [2025-02-18] We add evaluation results of DeepSeek-V3 [in the following section](#evaluation-results).
+* ${\color{red}[\text{2025-02-27 New}]}$ We spot minor bug in `utils/qa_construct.py` and reproduce the results of subgraph-level R1 task. The task-oriented and knowledge-oriented evaluation is therefore updated in the following [section](#evaluation-results).
+* [2025-02-18] We add evaluation results of DeepSeek-V3 in the following [section](#evaluation-results).
 
 ## Overview
 
@@ -85,6 +85,8 @@ We have open-sourced the responses of several LLMs using the MedKGEval framework
 Both task-oriented and knowledge-oriented evaluation metrics are computed using the script located at `utils/eval.py`.
 
 You can retrieve some of the evaluation results via this [Google Drive link](https://drive.google.com/file/d/1b6lF6DrjDtecXw7niWlcZlUxcgTykC7d/view?usp=sharing).
+
+The evaluation results with MedKGEval (`CPubMedKG_small`/`CPubMedKG_large`) and with MedKGEval (`CMeKG_small`/`CMeKG_large`) are presented in the [doc](./docs/evaluation.md).
 
 ### Evaluation with MedKGEval (`CPubMedKG_small`)
 
