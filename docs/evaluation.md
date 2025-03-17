@@ -15,7 +15,8 @@ The experimental results for task-oriented evaluation on `CPubMedKG_small` are p
 | [M] PULSE-7B       | 31.52 | 45.00 | 56.00 | 44.17 | 25.75 | 11.69 | 27.37 | 21.60 | 15.80 | 31.30 | 48.63 | 31.91 | 32.56 |
 | [M] WiNGPT2        | 97.83 | 85.00 | 73.00 | 85.28 | 75.21 | 31.86 | 57.96 | 55.01 | 33.80 | 68.50 | 73.73 | 58.68 | 66.32 |
 | [G] GPT-4o         | 97.83 | 90.00 | 71.00 | 86.28 | 84.12 | 59.31 | 62.19 | 68.54 | 46.51 | 41.50 | 89.29 | 59.10 | 71.31 |
-| [G] DeepSeek-V3 ${\color{red}[\text{New}]}$ | 97.83 | 87.50 | 71.00 | 85.44 | 78.35 | 58.48 | 60.95 | 65.93 | 42.82 | 45.72 | 87.10 | 58.55 | 69.97 |
+| [G] DeepSeek-V3    | 97.83 | 87.50 | 71.00 | 85.44 | 78.35 | 58.48 | 60.95 | 65.93 | 42.82 | 45.72 | 87.10 | 58.55 | 69.97 |
+| [G] Hunyuan-Large ${\color{red}[\text{New}]}$ | 96.74 | 100.0 | 72.00 | 89.58 | 60.38 | 49.90 | 58.24 | 56.17 | 47.36 | 58.45 | 85.45 | 63.75 | 69.84 |
 
 The experimental results for knowledge-oriented evaluation on `CPubMedKG_small` are presented below.
 
@@ -32,7 +33,8 @@ The experimental results for knowledge-oriented evaluation on `CPubMedKG_small` 
 | [M] PULSE-7B       | 31.24 | 29.89 | 25.67 | 24.65 | 28.15 |
 | [M] WiNGPT2        | 63.17 | 62.60 | 49.30 | 53.88 | 59.70 |
 | [G] GPT-4o         | 69.39 | 67.69 | 61.27 | 60.69 | 65.36 |
-| [G] DeepSeek-V3 ${\color{red}[\text{New}]}$ | 68.93 | 67.26 | 59.38 | 59.66 | 64.73 |
+| [G] DeepSeek-V3    | 68.93 | 67.26 | 59.38 | 59.66 | 64.73 |
+| [G] Hunyuan-Large ${\color{red}[\text{New}]}$ | 69.94 | 68.75 | 60.97 | 57.28 | 64.93 |
 
 ## Evaluation with MedKGEval (`CPubMedKG_large`)
 
@@ -83,7 +85,8 @@ The experimental results for task-oriented evaluation on `CMeKG_small` are prese
 | [M] PULSE-7B       | 36.56 | - | 83.33 | 59.95 | - | 10.23 | 32.75 | 21.49 | 18.69 | 61.47 | 59.82 | 46.66 | 42.89 |
 | [M] WiNGPT2        | 87.19 | - | 100.0 | 93.60 | - | 37.14 | 68.48 | 52.81 | 43.02 | 77.89 | 91.83 | 70.91 | 68.92 |
 | [G] GPT-4o         | 95.00 | - | 100.0 | 97.50 | - | 64.52 | 74.19 | 69.36 | 56.64 | 70.90 | 83.86 | 70.47 | 74.70 |
-| [G] DeepSeek-V3 ${\color{red}[\text{New}]}$ | 92.81 | - | 83.33 | 88.07 | - | 64.97 | 74.93 | 69.95 | 51.10 | 69.72 | 80.68 | 67.17 | 71.13 |
+| [G] DeepSeek-V3    | 92.81 | - | 83.33 | 88.07 | - | 64.97 | 74.93 | 69.95 | 51.10 | 69.72 | 80.68 | 67.17 | 71.13 |
+| [G] Hunyuan-Large ${\color{red}[\text{New}]}$ | 87.19 | - | 100.0 | 93.60 | - | 53.76 | 74.97 | 64.37 | 53.99 | 69.25 | 73.64 | 65.63 | 70.91 |
 
 The experimental results for knowledge-oriented evaluation on `CMeKG_small` are presented below.
 
@@ -100,7 +103,8 @@ The experimental results for knowledge-oriented evaluation on `CMeKG_small` are 
 | [M] PULSE-7B       | 33.92 | 36.38 | 25.67 | 36.47 | 36.41 |
 | [M] WiNGPT2        | 64.05 | 66.28 | 51.85 | 62.51 | 65.09 |
 | [G] GPT-4o         | 72.82 | 73.33 | 58.82 | 68.11 | 71.59 |
-| [G] DeepSeek-V3 ${\color{red}[\text{New}]}$ | 73.18 | 72.56 | 61.13 | 67.03 | 70.72 |
+| [G] DeepSeek-V3    | 73.18 | 72.56 | 61.13 | 67.03 | 70.72 |
+| [G] Hunyuan-Large ${\color{red}[\text{New}]}$ | 70.77 | 69.00 | 60.37 | 64.20 | 67.40 |
 
 ## Evaluation with MedKGEval (`CMeKG_large`)
 
