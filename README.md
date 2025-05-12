@@ -4,7 +4,8 @@ This repository contains the code and benchmarks for the paper _**How Much Medic
 
 ## Updates
 
-* ${\color{red}[\text{2025-04-22 New}]}$  We add evaluation results of HuatuoGPT-o1-7B in the following [section](#evaluation-results).
+* ${\color{red}[\text{2025-05-08 New}]}$  We add evaluation results of Qwen3-1.7B/4B/8B/14B in the following [section](#evaluation-results).
+* [2025-04-22]  We add evaluation results of HuatuoGPT-o1-7B in the following [section](#evaluation-results).
 * [2025-03-27]  We add evaluation results of DeepSeek-R1-Distill-Qwen-1.5B/7B/14B in the following [section](#evaluation-results).
 * [2025-03-17] We add evaluation results of Tencent-Hunyuan-Large in the following [section](#evaluation-results).
 * [2025-02-27] We spot minor bug in `utils/qa_construct.py` and reproduce the results of subgraph-level R1 task. The task-oriented and knowledge-oriented evaluation is therefore updated in the following [section](#evaluation-results).
@@ -54,6 +55,14 @@ The following table summarizes the large language models evaluated in this study
 | [G] DeepSeek-R1-1.5B  | 1.5B Dense   | [G]eneral-domain | YES | Qwen2.5-Math-1.5B | [deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B) |
 | [G] DeepSeek-R1-7B    | 7B Dense     | [G]eneral-domain | YES | Qwen2.5-Math-7B   | [deepseek-ai/DeepSeek-R1-Distill-Qwen-7B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B) |
 | [G] DeepSeek-R1-14B   | 14B Dense    | [G]eneral-domain | YES | Qwen2.5-14B       | [deepseek-ai/DeepSeek-R1-Distill-Qwen-14B](https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B) |
+| [G] Qwen3-1.7B*       | 1.7B Dense   | [G]eneral-domain | NO  | -                 | [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) |
+| [G] Qwen3-4B*         | 4B Dense     | [G]eneral-domain | NO  | -                 | [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) |
+| [G] Qwen3-8B*         | 8B Dense     | [G]eneral-domain | NO  | -                 | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) |
+| [G] Qwen3-14B*        | 14B Dense    | [G]eneral-domain | NO  | -                 | [Qwen/Qwen3-14B](https://huggingface.co/Qwen/Qwen3-14B) |
+| [G] Qwen3-1.7B-T*     | 1.7B Dense   | [G]eneral-domain | YES | -                 | [Qwen/Qwen3-1.7B](https://huggingface.co/Qwen/Qwen3-1.7B) |
+| [G] Qwen3-4B-T*       | 4B Dense     | [G]eneral-domain | YES | -                 | [Qwen/Qwen3-4B](https://huggingface.co/Qwen/Qwen3-4B) |
+| [G] Qwen3-8B-T*       | 8B Dense     | [G]eneral-domain | YES | -                 | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) |
+| [G] Qwen3-14B-T*      | 14B Dense    | [G]eneral-domain | YES | -                 | [Qwen/Qwen3-14B](https://huggingface.co/Qwen/Qwen3-14B) |
 | [M] DISC-MedLLM       | 13B Dense    | [M]edical-domain | NO  | Baichuan-13B      | [Flmc/DISC-MedLLM](https://huggingface.co/Flmc/DISC-MedLLM) |
 | [M] HuatuoGPT2-7B     | 7B Dense     | [M]edical-domain | NO  | Baichuan2-7B      | [FreedomIntelligence/HuatuoGPT2-7B](https://huggingface.co/FreedomIntelligence/HuatuoGPT2-7B)   |
 | [M] HuatuoGPT2-13B    | 13B Dense    | [M]edical-domain | NO  | Baichuan2-13B     | [FreedomIntelligence/HuatuoGPT2-13B](https://huggingface.co/FreedomIntelligence/HuatuoGPT2-13B) |
@@ -63,6 +72,8 @@ The following table summarizes the large language models evaluated in this study
 | [G] GPT-4o            | -            | [G]eneral-domain | NO  | -                 | ```2024-10-01-preview``` |
 | [G] DeepSeek-V3       | 37B Act / 671B MoE | [G]eneral-domain | NO  | -           | [deepseek-ai/DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3) |
 | [G] Hunyuan-Large     | 52B Act / 389B MoE | [G]eneral-domain | NO  | -           | ```hunyuan-large-2025-02-10``` |
+
+\* *Qwen3 LLMs support both non-thinking and thinking modes. We distinguish them in experiments as Qwen-4B (non-thinking mode) and Qwen-4B-T (thinking mode).*
 
 ### Running LLMs with MedKGEval Benchmarks
 
@@ -110,6 +121,10 @@ The experimental results for task-oriented evaluation on `CPubMedKG_small` are p
 | [G] DeepSeek-R1-1.5B | 81.52 | 65.00 | 64.00 | 70.17 | 46.63 | 46.61 | 43.09 | 45.44 | 37.70 | 60.76 | 62.55 | 53.67 | 56.43 |
 | [G] DeepSeek-R1-7B   | 96.74 | 87.50 | 60.00 | 81.41 | 73.93 | 57.78 | 57.00 | 62.90 | 43.40 | 52.66 | 83.10 | 59.72 | 68.01 |
 | [G] DeepSeek-R1-14B  | 98.91 | 100.0 | 63.00 | 87.30 | 83.64 | 59.38 | 60.69 | 67.90 | 54.09 | 47.68 | 89.96 | 63.91 | 73.04 |
+| [G] Qwen3-1.7B       | 96.74 | 67.50 | 69.00 | 77.75 | 64.16 | 48.19 | 49.94 | 54.10 | 25.81 | 80.82 | 70.49 | 59.04 | 63.63 |
+| [G] Qwen3-4B         | 97.83 | 92.50 | 76.00 | 88.78 | 55.35 | 48.44 | 59.55 | 54.45 | 30.11 | 68.77 | 80.94 | 59.94 | 67.72 |
+| [G] Qwen3-8B         | 97.83 | 82.50 | 74.00 | 84.78 | 87.30 | 51.45 | 59.87 | 66.21 | 42.89 | 58.28 | 89.74 | 63.64 | 71.54 |
+| [G] Qwen3-14B        | 96.74 | 87.50 | 74.00 | 86.08 | 76.58 | 49.45 | 57.61 | 61.21 | 44.75 | 57.83 | 67.47 | 56.68 | 67.99 |
 | [M] DISC-MedLLM      | 71.74 | 15.00 | 53.00 | 46.58 | 31.51 | 8.09  | 39.88 | 26.49 | 22.84 | 00.21 | 52.16 | 25.07 | 32.71 |
 | [M] HuatuoGPT2-7B    | 60.87 | 12.50 | 65.00 | 46.12 | 35.20 | 33.62 | 28.07 | 32.30 | 19.40 | 52.31 | 48.98 | 40.23 | 39.55 |
 | [M] HuatuoGPT2-13B   | 85.87 | 62.50 | 73.00 | 73.79 | 34.63 | 32.69 | 42.71 | 36.68 | 32.91 | 55.44 | 41.58 | 43.31 | 51.26 |
@@ -132,6 +147,10 @@ The experimental results for knowledge-oriented evaluation on `CPubMedKG_small` 
 | [G] DeepSeek-R1-1.5B | 55.97 | 55.76 | 46.63 | 47.02 | 52.85 |
 | [G] DeepSeek-R1-7B   | 67.27 | 66.42 | 59.01 | 58.70 | 63.85 |
 | [G] DeepSeek-R1-14B  | 70.48 | 68.89 | 63.08 | 61.53 | 66.44 |
+| [G] Qwen3-1.7B       | 63.15 | 63.27 | 51.40 | 53.92 | 60.16 |
+| [G] Qwen3-4B         | 68.07 | 67.00 | 54.02 | 53.47 | 62.49 |
+| [G] Qwen3-8B         | 69.35 | 69.57 | 61.52 | 62.94 | 66.69 |
+| [G] Qwen3-14B        | 66.05 | 65.29 | 60.58 | 59.13 | 63.23 |
 | [M] DISC-MedLLM      | 32.22 | 32.90 | 20.34 | 22.72 | 29.51 |
 | [M] HuatuoGPT2-7B    | 38.74 | 39.01 | 26.28 | 33.02 | 37.01 |
 | [M] HuatuoGPT2-13B   | 50.66 | 50.28 | 32.22 | 37.08 | 45.88 |
@@ -156,6 +175,10 @@ The experimental results for task-oriented evaluation on `CMeKG_small` are prese
 | [G] DeepSeek-R1-1.5B | 48.13 | - | 50.00 | 49.07 | - | 47.17 | 34.99 | 41.08 | 31.80 | 64.36 | 57.93 | 51.36 | 47.35 |
 | [G] DeepSeek-R1-7B   | 62.19 | - | 50.00 | 56.10 | - | 63.10 | 40.17 | 51.64 | 39.69 | 67.03 | 66.50 | 57.74 | 54.70 |
 | [G] DeepSeek-R1-14B  | 91.87 | - | 66.67 | 79.27 | - | 62.46 | 72.17 | 67.32 | 53.39 | 53.16 | 76.83 | 61.13 | 64.94 |
+| [G] Qwen3-1.7B       | 81.25 | - | 83.33 | 82.29 | - | 57.69 | 56.92 | 57.31 | 30.98 | 59.27 | 86.45 | 58.90 | 61.82 |
+| [G] Qwen3-4B         | 77.50 | - | 83.33 | 80.42 | - | 50.38 | 74.60 | 62.49 | 39.11 | 83.82 | 84.92 | 69.28 | 69.11 |
+| [G] Qwen3-8B         | 96.56 | - | 100.0 | 98.28 | - | 57.27 | 68.93 | 63.10 | 53.82 | 63.67 | 83.62 | 67.04 | 71.44 |
+| [G] Qwen3-14B        | 95.00 | - | 100.0 | 97.50 | - | 63.86 | 73.37 | 68.62 | 54.96 | 58.33 | 66.03 | 59.77 | 70.01 |
 | [M] DISC-MedLLM      | 54.06 | - | 50.00 | 52.03 | - | 3.61  | 39.50 | 21.56 | 22.73 | 00.71 | 53.50 | 25.65 | 28.21 |
 | [M] HuatuoGPT2-7B    | 73.44 | - | 66.67 | 70.06 | - | 33.46 | 24.99 | 29.23 | 22.66 | 52.18 | 58.88 | 44.57 | 42.45 |
 | [M] HuatuoGPT2-13B   | 71.56 | - | 100.0 | 85.78 | - | 35.70 | 44.57 | 40.14 | 38.06 | 63.75 | 50.71 | 50.84 | 54.54 |
@@ -178,6 +201,10 @@ The experimental results for knowledge-oriented evaluation on `CMeKG_small` are 
 | [G] DeepSeek-R1-1.5B | 45.17 | 46.12 | 41.37 | 47.03 | 46.42 |
 | [G] DeepSeek-R1-7B   | 56.43 | 56.12 | 54.51 | 54.51 | 55.59 |
 | [G] DeepSeek-R1-14B  | 69.88 | 68.84 | 58.14 | 61.86 | 66.51 |
+| [G] Qwen3-1.7B       | 58.12 | 59.77 | 44.87 | 59.89 | 59.81 |
+| [G] Qwen3-4B         | 67.61 | 67.59 | 54.50 | 67.23 | 67.47 |
+| [G] Qwen3-8B         | 72.78 | 71.10 | 59.60 | 65.24 | 69.14 |
+| [G] Qwen3-14B        | 73.49 | 70.19 | 64.87 | 62.96 | 67.78 |
 | [M] DISC-MedLLM      | 27.44 | 29.43 | 18.55 | 23.76 | 27.54 |
 | [M] HuatuoGPT2-7B    | 38.29 | 41.64 | 20.78 | 39.80 | 41.03 |
 | [M] HuatuoGPT2-13B   | 48.96 | 50.97 | 33.41 | 47.87 | 49.94 |
